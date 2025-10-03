@@ -1,20 +1,16 @@
 def check_strength(password):
 
-    flags = {
-        'is_eight_long': False,
-        'contains_upper_lower': False,
-        'contains_one_number': False,
-        'contains_special_char': False
-    }
+    def upper_and_lower(string):
+        return any(ch.isalpha() for ch in string) and string != string.upper() and string != string.lower()
+
     SPECIAL_CHARS = "!@#$%^&*"
 
-    flags['is_eight_long'] = len(password) >= 8
-
-    flags['contains_upper_lower'] = any(ch.isalpha() for ch in password) and password != password.upper() and password != password.lower()
-
-    flags['contains_one_number'] = any(ch.isdigit() for ch in password)
-
-    flags['contains_special_char'] = any(ch in SPECIAL_CHARS for ch in password)
+    flags = {
+        'is_eight_long': len(password) >= 8,
+        'contains_upper_lower': upper_and_lower(password),
+        'contains_one_number': any(ch.isdigit() for ch in password),
+        'contains_special_char': any(ch in SPECIAL_CHARS for ch in password)
+    }
 
     rules_met = sum(1 for value in flags.values() if value is True)
 
