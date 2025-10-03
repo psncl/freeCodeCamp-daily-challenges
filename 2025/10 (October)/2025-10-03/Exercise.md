@@ -1,5 +1,7 @@
 # P@ssw0rd Str3ngth!
 
+https://www.freecodecamp.org/learn/daily-coding-challenge/2025-10-03
+
 Given a password string, return `"weak"`, `"medium"`, or `"strong"` based on the strength of the password.
 
 A password is evaluated according to the following rules:
