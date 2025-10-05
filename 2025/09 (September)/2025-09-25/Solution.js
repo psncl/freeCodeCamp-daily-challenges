@@ -9,7 +9,6 @@ function secondLargest(arr) {
     } else if (first > num && num > second) {
       second = num;
     }
-    console.log(`First: ${first}, Second: ${second}`);
   });
 
   return second;
