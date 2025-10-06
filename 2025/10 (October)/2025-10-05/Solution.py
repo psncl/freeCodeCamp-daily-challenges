@@ -33,7 +33,7 @@ def get_luminosity_table() -> dict[str, int]:
     
     return luminosity_table
 
-## TESTS
+## Tests
 
 assert has_exoplanet("665544554") == False
 assert has_exoplanet("FGFFCFFGG") == True

@@ -14,7 +14,7 @@ def classification(temp):
             return stellar_classification
 
 
-## TESTS
+## Tests
 
 assert classification(5778) == "G"
 assert classification(2400) == "M"
