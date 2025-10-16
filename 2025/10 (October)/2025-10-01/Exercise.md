@@ -14,7 +14,7 @@ For example, the binary number `101` equals `5` in decimal because:
 
 ## Tests
 
-1. `to_decimal("1010101")` should return `85`.
 1. `to_decimal("101")` should return `5`.
 1. `to_decimal("1010")` should return `10`.
 1. `to_decimal("10010")` should return `18`.
+1. `to_decimal("1010101")` should return `85`.

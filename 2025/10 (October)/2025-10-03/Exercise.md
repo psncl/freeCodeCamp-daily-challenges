@@ -15,7 +15,6 @@ Return `"weak"` if the password meets fewer than two of the rules. Return `"medi
 
 ## Tests
 
-- `check_strength("C0d3&Fun!")` should return `"strong"`.
 - `check_strength("123456")` should return `"weak"`.
 - `check_strength("pass!!!")` should return `"weak"`.
 - `check_strength("Qwerty")` should return `"weak"`.
@@ -26,3 +25,4 @@ Return `"weak"` if the password meets fewer than two of the rules. Return `"medi
 - `check_strength("PASSWORD!")` should return `"medium"`.
 - `check_strength("PASSWORD!")` should return `"medium"`.
 - `check_strength("S3cur3P@ssw0rd")` should return `"strong"`.
+- `check_strength("C0d3&Fun!")` should return `"strong"`.

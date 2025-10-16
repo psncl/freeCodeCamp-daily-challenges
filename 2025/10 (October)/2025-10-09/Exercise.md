@@ -19,8 +19,8 @@ After day 28, the cycle repeats with day 1, a new moon.
 
 ## Tests
 
-1. `moon_phase("2022-12-14")` should return `"New"`.
 1. `moon_phase("2000-01-12")` should return `"New"`.
 1. `moon_phase("2000-01-13")` should return `"Waxing"`.
 1. `moon_phase("2014-10-15")` should return `"Full"`.
 1. `moon_phase("2012-10-21")` should return `"Waning"`.
+1. `moon_phase("2022-12-14")` should return `"New"`.

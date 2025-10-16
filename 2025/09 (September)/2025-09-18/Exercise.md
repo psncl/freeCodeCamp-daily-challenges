@@ -11,8 +11,8 @@ Given the size of a fuel tank, the current fuel level, and the price per gallon,
 
 ## Tests
 
+1. `costToFill(15, 10, 3.50)` should return `"$17.50"`.
+1. `costToFill(18, 9, 3.25)` should return `"$29.25"`.
+1. `costToFill(12, 12, 4.99)` should return `"$0.00"`.
+1. `costToFill(15, 9.5, 3.98)` should return `"$21.89"`.
 1. `costToFill(20, 0, 4.00)` should return `"$80.00"`.
-2. `costToFill(15, 10, 3.50)` should return `"$17.50"`.
-3. `costToFill(18, 9, 3.25)` should return `"$29.25"`.
-4. `costToFill(12, 12, 4.99)` should return `"$0.00"`.
-5. `costToFill(15, 9.5, 3.98)` should return `"$21.89"`.

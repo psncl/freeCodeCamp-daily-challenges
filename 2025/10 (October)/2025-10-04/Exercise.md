@@ -17,7 +17,6 @@ For today's challenge, you are given the surface temperature of a star in Kelvin
 
 ## Tests
 
-1. `classification(11432)` should return `"B"`.
 1. `classification(5778)` should return `"G"`.
 1. `classification(2400)` should return `"M"`.
 1. `classification(9999)` should return `"A"`.
@@ -25,3 +24,4 @@ For today's challenge, you are given the surface temperature of a star in Kelvin
 1. `classification(3699)` should return `"M"`.
 1. `classification(210000)` should return `"O"`.
 1. `classification(6000)` should return `"F"`.
+1. `classification(11432)` should return `"B"`.

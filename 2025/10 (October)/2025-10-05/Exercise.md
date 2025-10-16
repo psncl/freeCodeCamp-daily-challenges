@@ -12,9 +12,9 @@ A star is considered to have an exoplanet if any single reading is less than or 
 
 ## Tests
 
-1. `has_exoplanet("ZXXWYZXYWYXZEGZXWYZXYGEE")` should return `True`.
 1. `has_exoplanet("665544554")` should return `False`.
 1. `has_exoplanet("FGFFCFFGG")` should return `True`.
 1. `has_exoplanet("MONOPLONOMONPLNOMPNOMP")` should return `False`.
 1. `has_exoplanet("FREECODECAMP")` should return `True`.
 1. `has_exoplanet("9AB98AB9BC98A")` should return `False`.
+1. `has_exoplanet("ZXXWYZXYWYXZEGZXWYZXYGEE")` should return `True`.

@@ -10,10 +10,10 @@ Given two strings, determine if the second string is a mirror of the first.
 
 ## Tests
 
-1. `isMirror("Hello World", "!dlroW !olleH")` should return `true`.
 1. `isMirror("helloworld", "helloworld")` should return `false`.
 1. `isMirror("Hello World", "dlroW olleH")` should return `true`.
 1. `isMirror("RaceCar", "raCecaR")` should return `true`.
 1. `isMirror("RaceCar", "RaceCar")` should return `false`.
 1. `isMirror("Mirror", "rorrim")` should return `false`.
 1. `isMirror("Hello World", "dlroW-olleH")` should return `true`.
+1. `isMirror("Hello World", "!dlroW !olleH")` should return `true`.

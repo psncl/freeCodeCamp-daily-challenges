@@ -8,7 +8,6 @@ Given an integer, determine if it is a perfect square.
 
 ## Tests
 
-1. `isPerfectSquare(25281)` should return `true`.
 1. `isPerfectSquare(9)` should return `true`.
 1. `isPerfectSquare(49)` should return `true`.
 1. `isPerfectSquare(1)` should return `true`.
@@ -16,3 +15,4 @@ Given an integer, determine if it is a perfect square.
 1. `isPerfectSquare(99)` should return `false`.
 1. `isPerfectSquare(-9)` should return `false`.
 1. `isPerfectSquare(0)` should return `true`.
+1. `isPerfectSquare(25281)` should return `true`.

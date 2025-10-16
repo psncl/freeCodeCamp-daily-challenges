@@ -9,6 +9,6 @@ Given a sentence, return the longest word in the sentence.
 
 ## Tests
 
-1. `get_longest_word("This sentence has multiple long words.")` should return `"sentence"`.
 1. `get_longest_word("coding is fun")` should return `"coding"`.
 1. `get_longest_word("Coding challenges are fun and educational.")` should return `"educational"`.
+1. `get_longest_word("This sentence has multiple long words.")` should return `"sentence"`.

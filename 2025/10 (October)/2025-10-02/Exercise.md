@@ -17,7 +17,7 @@ A binary number uses only the digits `0` and `1` to represent any number. To con
 
 ## Tests
 
-1. `to_binary(99)` should return `"1100011"`.
 1. `to_binary(5)` should return `"101"`.
 1. `to_binary(12)` should return `"1100"`.
 1. `to_binary(50)` should return `"110010"`.
+1. `to_binary(99)` should return `"1100011"`.

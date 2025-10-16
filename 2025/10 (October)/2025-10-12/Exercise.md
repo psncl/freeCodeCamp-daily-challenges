@@ -17,10 +17,10 @@ Return `"We win"` if your team is the winner, `"We lose"` if your team loses, an
 
 ## Tests
 
-1. `battle("We must never surrender", "Our team must win")` should return `"Draw"`.
 1. `battle("hello world", "hello word")` should return `"We win"`.
 1. `battle("Hello world", "hello world")` should return `"We win"`.
 1. `battle("lorem ipsum", "kitty ipsum")` should return `"We lose"`.
 1. `battle("hello world", "world hello")` should return `"Draw"`.
 1. `battle("git checkout", "git switch")` should return `"We win"`.
 1. `battle("Cheeseburger with fries", "Cheeseburger with Fries")` should return `"We lose"`.
+1. `battle("We must never surrender", "Our team must win")` should return `"Draw"`.

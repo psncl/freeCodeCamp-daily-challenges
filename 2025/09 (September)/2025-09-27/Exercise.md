@@ -17,7 +17,6 @@ Determine if it's a spam number based on the following criteria:
 
 ## Tests
 
-1. `is_spam("+00 (555) 234-0182")` should return `False`.
 1. `is_spam("+0 (200) 234-0182")` should return `False`.
 1. `is_spam("+091 (555) 309-1922")` should return `True`.
 1. `is_spam("+1 (555) 435-4792")` should return `True`.
@@ -25,3 +24,4 @@ Determine if it's a spam number based on the following criteria:
 1. `is_spam("+0 (155) 131-6943")` should return `True`.
 1. `is_spam("+0 (555) 135-0192")` should return `True`.
 1. `is_spam("+0 (555) 564-1987")` should return `True`.
+1. `is_spam("+00 (555) 234-0182")` should return `False`.

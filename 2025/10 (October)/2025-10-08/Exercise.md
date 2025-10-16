@@ -18,8 +18,8 @@ For example, given `1` as a mass, return `[0.95, 1.37]`.
 
 ## Tests
 
-1. `goldilocks_zone(20)` should return `[179.69, 259.13]`.
 1. `goldilocks_zone(1)` should return `[0.95, 1.37]`.
 1. `goldilocks_zone(0.5)` should return `[0.28, 0.41]`.
 1. `goldilocks_zone(6)` should return `[21.85, 31.51]`.
 1. `goldilocks_zone(3.7)` should return `[9.38, 13.52]`.
+1. `goldilocks_zone(20)` should return `[179.69, 259.13]`.
