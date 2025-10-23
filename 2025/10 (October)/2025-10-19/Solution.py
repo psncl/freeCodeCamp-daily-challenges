@@ -11,7 +11,6 @@ def extract_attributes(element: str) -> list[str]:
     replacements = { ord('='): ', ', ord('"'): "" }
     return [match.translate(replacements) for match in matches]
 
-
 ## Tests
 
 assert extract_attributes('<span class="red"></span>') == ["class, red"]

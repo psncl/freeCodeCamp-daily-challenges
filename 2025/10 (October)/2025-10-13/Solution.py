@@ -2,7 +2,7 @@ def to_12(time: str) -> str:
 
     hours = int(time[0:2])
     minutes = time[2:4]
-    
+
     if hours > 12:
         return f"{hours - 12}:{minutes} PM"
     elif hours == 0:

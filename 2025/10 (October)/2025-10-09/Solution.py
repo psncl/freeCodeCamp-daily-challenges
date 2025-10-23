@@ -18,7 +18,7 @@ def moon_phase(date_string: str) -> str:
     for (days, phase) in moon_phases:
         if difference_days_cycle >= days:
             return phase
-    
+
 def parse_date(input_str: str) -> date:
     date_format = "%Y-%m-%d"
     return datetime.strptime(input_str, date_format).date()

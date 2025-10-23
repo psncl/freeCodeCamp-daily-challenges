@@ -13,7 +13,6 @@ def classification(temp):
         if temp >= temp_threshold:
             return stellar_classification
 
-
 ## Tests
 
 assert classification(5778) == "G"

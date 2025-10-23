@@ -2,7 +2,7 @@ def has_exoplanet(readings: str) -> bool:
 
     luminosities = [luminosity_value(reading) for reading in readings]
     avg_readings = sum(luminosities) / len(luminosities)
-    
+
     return any(luminosity <= (0.8 * avg_readings) for luminosity in luminosities)
 
 def luminosity_value(reading: str) -> int:

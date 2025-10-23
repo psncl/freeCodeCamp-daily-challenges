@@ -18,7 +18,7 @@ def hex_to_decimal(hex: str) -> int:
         """
         digit = int(ch) if ch.isdigit() else hex_dec_mappings[ch]
         decimal += digit * (16 ** i)
-    
+
     return decimal
 
 ## Tests

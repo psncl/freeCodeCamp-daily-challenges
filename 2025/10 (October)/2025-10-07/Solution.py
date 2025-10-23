@@ -6,7 +6,7 @@ def find_landing_spot(matrix: Matrix) -> list[int]:
 
     landing_spots: set[tuple[int, int]] = set()
     rows = [row for row in matrix]
-    
+
     for row_index, row in enumerate(rows):
         for column_index, column in enumerate(row):
             if column == 0:

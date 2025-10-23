@@ -8,7 +8,7 @@ def mask(card: str) -> str:
         separator = "-"
     else:
         return "" #invalid input
-    
+
     last_four_digits = card.split(separator)[-1]
     obfuscated = ["****"] * 3
     obfuscated.append(last_four_digits)

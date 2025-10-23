@@ -43,7 +43,7 @@ def launch_fuel_recursive(payload: int, prev_fuel_needed: float = 0.0) -> float:
 
     if updated_fuel_needed - prev_fuel_needed < FUEL_DELTA:
         return round(updated_fuel_needed, 1)
-    
+
     return launch_fuel_recursive(payload, updated_fuel_needed)
 
 ## Tests
