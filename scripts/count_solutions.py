@@ -17,7 +17,7 @@ def latest_solution(directory: str, prefix: str) -> str:
     return max(matching_folders)
     
 def main():
-    solutions_dir = '../2025'
+    solutions_dir = '2025'
     count = count_solution_files(solutions_dir)
     latest = latest_solution(solutions_dir, prefix="2025")
 
