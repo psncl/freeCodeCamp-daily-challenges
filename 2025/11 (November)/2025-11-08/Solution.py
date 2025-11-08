@@ -5,7 +5,7 @@ def can_post(message: str) -> str:
         (80, "long post")
     ]
 
-    return next((msg for (length, msg) in lengths if len(message) < length), "invalid post")
+    return next((msg for (length, msg) in lengths if len(message) <= length), "invalid post")
 
 ## Tests
 
