@@ -3,7 +3,7 @@ def one_hundred(chars: str) -> str:
     string: str = chars * (100 // len(chars))
 
     remaining_count: int = 100 % len(chars)
-    if remaining_count != 0:
+    if remaining_count > 0:
         string += chars[:remaining_count]
 
     return string
