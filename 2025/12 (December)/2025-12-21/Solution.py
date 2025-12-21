@@ -43,3 +43,44 @@ assert daylight_hours(23) == 10
 assert daylight_hours(88) == 0
 assert daylight_hours(-33) == 13
 assert daylight_hours(70) == 2
+
+
+# More declarative way using min() and lambda to find the closest latitude.
+# However, this doesn't make use of the fact that the mappings are in sorted order,
+# while the previous solution stops going through the mappings once it finds a larger value.
+def daylight_hours_declarative(latitude: int) -> int:
+
+    latitude_to_daylight: dict[int, int] = {
+        -90: 24,
+        -75: 23,
+        -60: 21,
+        -45: 15,
+        -30: 13,
+        -15: 12,
+        0: 12,
+        15:	11,
+        30:	10,
+        45:	9,
+        60:	6,
+        75:	2,
+        90:	0,
+    }
+
+    if latitude in latitude_to_daylight:
+        return latitude_to_daylight[latitude]
+
+    lat_keys = list(latitude_to_daylight.keys())
+    
+    closest_latitude = min(lat_keys, key=lambda lat: abs(lat - latitude))
+    return latitude_to_daylight[closest_latitude]
+
+## Tests
+
+assert daylight_hours_declarative(45) == 9
+assert daylight_hours_declarative(0) == 12
+assert daylight_hours_declarative(-90) == 24
+assert daylight_hours_declarative(-10) == 12
+assert daylight_hours_declarative(23) == 10
+assert daylight_hours_declarative(88) == 0
+assert daylight_hours_declarative(-33) == 13
+assert daylight_hours_declarative(70) == 2
