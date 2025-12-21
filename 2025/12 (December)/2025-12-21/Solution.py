@@ -24,7 +24,6 @@ def daylight_hours(latitude: int) -> int:
     lat_keys = sorted(list(latitude_to_daylight.keys()))
 
     for i in range(len(lat_keys)):
-        prev = None
         current = lat_keys[i]
 
         if latitude < current:
