@@ -1,4 +1,4 @@
-def create_board(dimensions: list[int]):
+def create_board(dimensions: list[int]) -> list[list[str]]:
     
     rows, cols = dimensions[0], dimensions[1]
     matrix: list[list[str]] = [[""] * cols for _ in range(rows)]
@@ -26,7 +26,7 @@ assert create_board([5, 4]) == [["X", "O", "X", "O"], ["O", "X", "O", "X"], ["X"
 # Better version suggested by Claude that uses mathematical property of a checkerboard,
 # where the cell value depends on the sum of row and column indices being even or odd.
 
-def create_board_ai(dimensions: list[int]):
+def create_board_ai(dimensions: list[int]) -> list[list[str]]:
 
     rows, cols = dimensions[0], dimensions[1]
     matrix: list[list[str]] = [[""] * cols for _ in range(rows)]
