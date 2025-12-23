@@ -7,7 +7,7 @@ def get_amount_in_usd(item: list[str])-> float:
         'USD': 1.0,
         'EUR': 1.1,
         'GBP': 1.25,
-        'JPY': 0.0070,
+        'JPY': 0.007,
         'CAD': 0.75
     }
 
