@@ -1,4 +1,4 @@
-def get_number_of_plants(field_size: float, unit: str, crop: str) -> float:
+def get_number_of_plants(field_size: float, unit: str, crop: str) -> int:
 
     SQUARE_METRES_FACTOR: dict[str, float] = {
         "acres": 4046.86,
