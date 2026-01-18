@@ -4,14 +4,8 @@ def knight_moves(position: str) -> int:
     number = int(position[1])
 
     possible_squares: list[str] = [
-        f"{offset_letter(letter, 1)}{offset_number(number, 2)}",
-        f"{offset_letter(letter, 1)}{offset_number(number, -2)}",
-        f"{offset_letter(letter, 2)}{offset_number(number, 1)}",
-        f"{offset_letter(letter, 2)}{offset_number(number, -1)}",
-        f"{offset_letter(letter, -1)}{offset_number(number, 2)}",
-        f"{offset_letter(letter, -1)}{offset_number(number, -2)}",
-        f"{offset_letter(letter, -2)}{offset_number(number, 1)}",
-        f"{offset_letter(letter, -2)}{offset_number(number, -1)}",
+        f"{offset_letter(letter, dx)}{offset_number(number, dy)}"
+        for dx, dy in [(1, 2), (1, -2), (2, 1), (2, -1), (-1, 2), (-1, -2), (-2, 1), (-2, -1)]
     ]
 
     return len(list(filter(valid_square, possible_squares)))
