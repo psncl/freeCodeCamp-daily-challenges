@@ -22,7 +22,7 @@ def get_team_and_points(team_record: str) -> TeamInfo:
 
     total_points = (wins * 3) + (overtime_wins * 2) + overtime_losses
 
-    return {"name": team, "total_points": total_points}
+    return TeamInfo(name=team, total_points=total_points)
 
 ## Tests
 
