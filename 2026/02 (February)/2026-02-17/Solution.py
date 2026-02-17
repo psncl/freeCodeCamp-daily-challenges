@@ -1,6 +1,8 @@
 def check_eligibility(athlete_weights: list[int], sled_weight: int) -> str:
 
     team_size = len(athlete_weights)
+    sled_has_minimum_weight: bool = False
+    sled_plus_athletes_are_under_maximum_weight: bool = False
 
     min_sled_weights: dict[int, int] = {
         1: 162,
@@ -8,8 +10,8 @@ def check_eligibility(athlete_weights: list[int], sled_weight: int) -> str:
         4: 210
     }
 
-    if sled_weight < min_sled_weights[team_size]:
-        return "Not Eligible"
+    if sled_weight >= min_sled_weights[team_size]:
+        sled_has_minimum_weight = True
 
     max_total_weights: dict[int, int] = {
         1: 247,
@@ -17,10 +19,13 @@ def check_eligibility(athlete_weights: list[int], sled_weight: int) -> str:
         4: 630
     }
     
-    if sum(athlete_weights) + sled_weight > max_total_weights[team_size]:
-        return "Not Eligible"
+    if sum(athlete_weights) + sled_weight <= max_total_weights[team_size]:
+        sled_plus_athletes_are_under_maximum_weight = True
     
-    return "Eligible"
+    if sled_has_minimum_weight and sled_plus_athletes_are_under_maximum_weight:
+        return "Eligible"
+    else:
+        return "Not Eligible"
 
 ## Tests
 
