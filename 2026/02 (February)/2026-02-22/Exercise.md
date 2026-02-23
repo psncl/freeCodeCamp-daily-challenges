@@ -1,5 +1,7 @@
 # 2026 Winter Games Day 17: Closing Day
 
+https://www.freecodecamp.org/learn/daily-coding-challenge/2026-02-22
+
 Given a 2D array of medal winners, return a medal count for each country as a CSV string.
 
 - In the given array, each sub-array represents a single event: `[gold_winner, silver_winner, bronze_winner]`

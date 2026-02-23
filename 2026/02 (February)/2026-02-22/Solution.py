@@ -1,4 +1,4 @@
-class Medal_tally:
+class MedalTally:
     country_name: str
     gold_count: int = 0
     silver_count: int = 0
@@ -7,24 +7,30 @@ class Medal_tally:
     def __init__(self, country: str) -> None:
         self.country_name = country
 
-    def get_total_medal_count(self) -> int:
+    @property
+    def total_medal_count(self) -> int:
         return self.gold_count + self.silver_count + self.bronze_count
 
-    def get_csv_string(self) -> str:
-        return ",".join([self.country_name, str(self.gold_count), str(self.silver_count), str(self.bronze_count), str(self.get_total_medal_count())])
+    def to_csv_row(self) -> str:
+        return ",".join([
+            self.country_name, 
+            str(self.gold_count), 
+            str(self.silver_count), 
+            str(self.bronze_count), 
+            str(self.total_medal_count)
+            ])
 
 def count_medals(winners: list[list[str]]) -> str:
 
-    countries_medals: dict[str, Medal_tally] = {}
+    countries_medals: dict[str, MedalTally] = {}
 
     for event in winners:
         for i in range(len(event)):
             country_name = event[i]
 
-            if country_name not in countries_medals:
-                countries_medals[country_name] = Medal_tally(country_name)
+            countries_medals.setdefault(country_name, MedalTally(country_name))
 
-            country_medals = countries_medals.get(country_name)
+            country_medals = countries_medals[country_name]
 
             if i == 0:
                 country_medals.gold_count += 1
@@ -33,11 +39,11 @@ def count_medals(winners: list[list[str]]) -> str:
             elif i == 2:
                 country_medals.bronze_count += 1
 
-    # Had to use a slightly hacky sorting mechanism, by negating gold_count, in order to sort gold medals by DESC, then country name by ASC.
+    # Negated gold_count in order to sort first by DESC, then by ASC.
     sorted_countries = sorted(countries_medals.values(), key=lambda c: (-c.gold_count, c.country_name))
 
     csv_header = "Country,Gold,Silver,Bronze,Total"
-    csv_rows = "\n".join([c.get_csv_string() for c in sorted_countries])
+    csv_rows = "\n".join([c.to_csv_row() for c in sorted_countries])
 
     return "\n".join([csv_header, csv_rows])
 
