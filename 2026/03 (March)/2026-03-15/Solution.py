@@ -5,7 +5,7 @@ def get_captured_value(pieces: list[str]) -> int | Literal["Checkmate"]:
 
     if "K" not in pieces:
         return "Checkmate"
-    
+
     # Map chess pieces to a tuple of (quantity, value)
     pieces_inventory: dict[str, tuple[int, int]] = {
         "P": (8, 1),
