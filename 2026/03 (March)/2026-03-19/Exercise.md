@@ -1,0 +1,32 @@
+# Inverted Matrix
+
+https://www.freecodecamp.org/learn/daily-coding-challenge/2026-03-19
+
+Given a matrix (an array of arrays) filled with two distinct values, return a new matrix where all occurrences of one value are swapped with the other.
+
+For example, given:
+
+```python
+[
+  ["a", "b"],
+  ["a", "a"]
+]
+```
+
+Return:
+
+```python
+[
+  ["b", "a"],
+  ["b", "b"]
+]
+```
+
+## Tests
+
+1. `invert_matrix([["a", "b"], ["a", "a"]])` should return `[["b", "a"], ["b", "b"]]`.
+1. `invert_matrix([[1, 0, 1], [1, 1, 1], [0, 1, 0]])` should return `[[0, 1, 0], [0, 0, 0], [1, 0, 1]]`.
+1. `invert_matrix([["apple", "banana", "banana", "apple"], ["banana", "apple", "apple", "banana"], ["banana", "banana", "banana", "apple"]])` should return `[["banana", "apple", "apple", "banana"], ["apple", "banana", "banana", "apple"], ["apple", apple", "apple", "banana"]]`.
+
+1. `invert_matrix([[6, 7, 7, 7, 6], [7, 6, 7, 6, 7], [7, 7, 6, 7, 7], [7, 6, 7, 6, 7], [6, 7, 7, 7, 6]])` should return `[[7, 6, 6, 6, 7], [6, 7, 6, 7, 6], [6, 6, 7, 6, 6], [6, 7, 6, 7, 6], [7, 6, 6, 6, 7]]`.
+1. `invert_matrix([[1.2, 2.1, 2.1, 2.1], [2.1, 1.2, 2.1, 1.2], [1.2, 1.2, 2.1, 2.1]])` should return `[[2.1, 1.2, 1.2, 1.2], [1.2, 2.1, 1.2, 2.1], [2.1, 2.1, 1.2, 1.2]]`.
