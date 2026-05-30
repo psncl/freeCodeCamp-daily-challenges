@@ -33,46 +33,35 @@ def features(ranks: list[str], suits: list[str]) -> HandFeatures:
     
     return HandFeatures(nums, is_flush, is_straight, counts)
 
-
 def is_royal_flush(f: HandFeatures) -> bool:
     return f.flush and set(f.nums) == {8, 9, 10, 11, 12}
-
 
 def is_straight_flush(f: HandFeatures) -> bool:
     return f.flush and f.straight
 
-
 def is_four_of_a_kind(f: HandFeatures) -> bool:
     return 4 in f.counts.values()
-
 
 def is_full_house(f: HandFeatures) -> bool:
     return sorted(f.counts.values()) == [2, 3]
 
-
 def is_flush_hand(f: HandFeatures) -> bool:
     return f.flush
-
 
 def is_straight_hand(f: HandFeatures) -> bool:
     return f.straight
 
-
 def is_three_of_a_kind(f: HandFeatures) -> bool:
     return 3 in f.counts.values()
-
 
 def is_two_pair(f: HandFeatures) -> bool:
     return list(f.counts.values()).count(2) == 2
 
-
 def is_pair(f: HandFeatures) -> bool:
     return 2 in f.counts.values()
 
-
 def is_high_card(f: HandFeatures) -> bool:
     return True
-
 
 HANDS: list[tuple[str, Predicate]] = [
     ("Royal Flush",     is_royal_flush),
@@ -86,7 +75,6 @@ HANDS: list[tuple[str, Predicate]] = [
     ("Pair",            is_pair),
     ("High Card",       is_high_card),
 ]
-
 
 def get_best_hand(cards: list[str]) -> str:
     ranks, suits = parse(cards)
